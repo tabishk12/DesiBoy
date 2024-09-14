@@ -1,0 +1,402 @@
+p{
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  font-size: 50px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+:root {
+  --white-color: #fff;
+}
+html, body {
+  margin: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+}
+html {
+  font-size: 62.5%;
+}
+
+body {
+  background: var(--white-color);
+}
+.main-content {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.content {
+  flex: 1;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  max-width: 1536px;
+  margin: 0 auto;
+}
+
+.single-page {
+  position: relative;
+  padding: 1.3rem 1.5rem;
+}
+
+.product {
+  display: flex;
+  gap: 3rem;
+}
+
+.image-box {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.mainImg {
+  max-width: 700px;
+  min-width: 300px;
+  max-height: 700px;
+  min-height: 300px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.mainImg img {
+  width: 485px;
+  height: 600px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.imgs {
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+  width: 100%;
+  height: 90px;
+  margin-top: 1rem;
+}
+
+.mini-box {
+  width: 80px;
+  height: 80px;
+  background: var(--white-color);
+  border-radius: .5rem;
+  border: 1px solid #000;
+  cursor: pointer;
+  /* overflow: hidden; */
+}
+
+.mini-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: .5s ease;
+}
+
+.mini-box:hover img {
+  transform: scale(1.2);
+}
+
+.details-box {
+  flex: 1.2;
+}
+.headder {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height:4rem;
+  background: rgb(14, 14, 14);
+  padding: 10 1.5rem;
+}
+
+.nav-links ul, .svgs ul {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.headder li {
+  margin: 0 2px;
+  font-size: 2rem;
+}
+
+.nav-link, .nav-link-2 {
+  text-decoration: none;
+  color: #fff;
+}
+
+.svgs li {
+  font-size: 2rem;
+}
+.logo {
+  color: #333; 
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-radius: 12px;
+  background-color: #f6f6d8; 
+  padding: 10px 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: inline-block;
+  font-family: 'Georgia', serif;
+  letter-spacing: 1px;
+  text-align: center; 
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+/* Overall Page Styling */
+.review-page {
+  width: 90%;
+  max-width: 800px;
+  margin: 50px auto;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+  background-color: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2 {
+  text-align: center;
+  color: #4CAF50;
+}
+
+/* Form Styling */
+.review-form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.review-form .form-group {
+  margin-bottom: 20px;
+}
+
+.review-form input, 
+.review-form textarea, 
+.review-form select {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  margin-top: 5px;
+  font-size: 16px;
+}
+
+.review-form input:focus, 
+.review-form textarea:focus, 
+.review-form select:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-image: linear-gradient(to right, #4CAF50, #45a049);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-image 0.3s ease;
+}
+
+button:hover {
+  background-image: linear-gradient(to right, #45a049, #4CAF50);
+}
+
+/* Review List Styling */
+.review-list {
+  margin-top: 30px;
+}
+
+.review-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.review-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.review-card strong {
+  font-size: 20px;
+  color: #333;
+}
+
+.review-card .rating {
+  margin: 10px 0;
+}
+
+.review-card p {
+  color: #666;
+  margin-top: 10px;
+  font-size: 16px;
+}
+
+/* Booking page CSS */
+/* Overall Page Styling */
+.booking-page {
+  width: 90%;
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: #4CAF50;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+.booking-form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #555;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #4CAF50;
+  box-shadow: 0 0 5px rgba(76, 175, 80, 0.5);
+}
+
+/* Button Styling */
+button {
+  width: 100%;
+  padding: 12px;
+  background-image: linear-gradient(to right, #4CAF50, #45a049);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-image 0.3s ease;
+}
+
+button:hover {
+  background-image: linear-gradient(to right, #45a049, #4CAF50);
+}
+
+/* Success Message */
+.success-message {
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #e0ffe0;
+  border: 1px solid #4CAF50;
+  color: #4CAF50;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Rate Card Styling */
+.rate-card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  width: 100%;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.card-header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.card-header h1 {
+  font-size: 1.8rem;
+  color: #333;
+  margin: 0;
+}
+
+.rate-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.rate-table th, .rate-table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+.rate-table th {
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+.rate-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.rate-table tr:hover {
+  background-color: #f1f1f1;
+}
+
+.card-footer {
+  text-align: center;
+}
+
+.card-footer p {
+  margin: 5px 0;
+}
+
+.contact-info {
+  font-weight: bold;
+  color: #2a7f62;
+}
